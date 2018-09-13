@@ -1,0 +1,64 @@
+nav a {
+    padding:15px;
+    padding-bottom:4px;
+    font-size: 1.5em;
+    text-decoration: none;
+    color: 	#0000CD;
+}
+nav a:hover {
+    border-bottom:2px orange solid;
+    font-size: 2em;
+    transition: .4s;
+}
+body{
+    background-color: #404040;
+    color: gray;
+}
+header, main, nav, footer{
+    text-align: center
+}
+#logo{
+    width: 100px;
+    height: 50px
+}
+#title{
+    color: #0000FF;
+}
+figcaption{
+    display:block;
+}
+figure{
+    width: 500px;
+
+}
+#imagegroup{
+    margin: auto;
+}
+#mainbody{
+    float:right;
+    width:1200px;
+}
+#figure{
+    float: left;
+    
+}
+#imgcaption{
+    width: 650px;
+}
+.macimages img{
+    float: none;
+    width: 700px;
+    height:400px;
+    padding:50px;
+}
+#macblurb{
+    text-align: center;
+    color: white;
+}
+#sourcelist{
+    text-align: left;
+}
+.linuxinfo{
+    color:white;
+    text-align: center;
+}
