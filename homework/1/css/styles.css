@@ -47,8 +47,6 @@ figure{
 }
 .macimages img{
     float: none;
-    width: 700px;
-    height:400px;
     padding:50px;
 }
 #macblurb{
@@ -61,4 +59,7 @@ figure{
 .linuxinfo{
     color:white;
     text-align: center;
+}
+#bar{
+    width: 40%;
 }
