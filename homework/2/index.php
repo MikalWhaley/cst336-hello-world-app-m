@@ -104,7 +104,7 @@
         <h1><marquee behavior="alternate">Multiplication Game</marquee></h1>
         
     </head>
-    <link href="homework/2/css/styles.css" rel="stylesheet" type="text/css">
+    <link href="css/styles.css" rel="stylesheet" type="text/css">
     <body background = "img/bg.png">
 
     <?php
@@ -121,7 +121,7 @@
         }if($player1 == $player2){
          echo "!BIG TIE!";
          echo "<br>";
-         echo '<img id = "whoa" src=/homework/2/img/whoa.jpg alt="whoaman">';
+         echo '<img id = "whoa" src=img/whoa.jpg alt="whoaman">';
         }
         if($player1 < $player2){
             echo "Player 2 is the winner!";
