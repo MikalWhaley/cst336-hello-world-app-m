@@ -6,23 +6,28 @@ body{
     text-align: center;
     color:#7FFFD4;/* lightish green*/
     font-family: Courier;
+    text-shadow: 3px 3px 5px purple;
 
 }
 h2{
     color: orange;
     font-family: sans-serif;
+    text-shadow: 3px 3px 5px purple;
 }
 h1{
     color: purple;
     font-family: fantasy;
+    text-shadow: 2px 2px 4px red;
 }
 h3{
     font-family: cursive;
     color:#AFEEEE;
+    text-shadow: 3px 3px 5px purple;
 }
 .phpmain{
     text-align: center;
     color:red;
     font-family: fantasy;
     font-size: 150%;
+    text-shadow: 2px 2px 4px blue;
 }
