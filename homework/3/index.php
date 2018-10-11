@@ -97,7 +97,7 @@ function names(){
         <title>Your Name, Please</title>
 
     </head>
-     <link href="css/styles.css" rel="stylesheet" type="text/css">
+     <link href="/work/homework/3/css/styles.css" rel="stylesheet" type="text/css">
     <body>
         
         <div class='phpmain'>
