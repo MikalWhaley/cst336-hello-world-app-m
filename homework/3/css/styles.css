@@ -1,0 +1,28 @@
+body{
+    background-image: url("/work/homework/3/img/90.jpg");
+    background-size: cover;
+}
+.container{
+    text-align: center;
+    color:#7FFFD4;/* lightish green*/
+    font-family: Courier;
+
+}
+h2{
+    color: orange;
+    font-family: sans-serif;
+}
+h1{
+    color: purple;
+    font-family: fantasy;
+}
+h3{
+    font-family: cursive;
+    color:#AFEEEE;
+}
+.phpmain{
+    text-align: center;
+    color:red;
+    font-family: fantasy;
+    font-size: 150%;
+}
