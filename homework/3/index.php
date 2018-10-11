@@ -114,10 +114,13 @@ function names(){
             <form method = "POST">
                 
                 <h2>How many names?</h2>
-
-                <input type="radio" name="amount" id="buttons" value="2" /> The Classic (2 Names) <br />
-                <input type="radio" name="amount" id="buttons" value="3" /> Powerful Lad (3 Names) <br />
-                <input type="radio" name="amount" id="buttons" value="4" /> "Not to be Trifled With" (4 Names) <br />
+                
+                <label for="buttons"> The Classic (2 Names)</label>
+                <input type="radio" name="amount" id="buttons" value="2" <?php if (isset($_POST['amount']) && $_POST['amount'] == '2')  echo ' checked="checked"'; ?>/> <br />
+                <label for="buttons"> Powerful Lad (3 Names)</label>
+                <input type="radio" name="amount" id="buttons" value="3" <?php if (isset($_POST['amount']) && $_POST['amount'] == '3')  echo ' checked="checked"'; ?>/>  <br />
+                <label for="buttons"> "Not to be Trifled With" (4 Names)</label>
+                <input type="radio" name="amount" id="buttons" value="4" <?php if (isset($_POST['amount']) && $_POST['amount'] == '4')  echo ' checked="checked"'; ?>/>  <br />
                 
                  <br />
                  <h2> Got a surname?</h2>
@@ -126,9 +129,9 @@ function names(){
 
                  <br />
                  <h2>Things I Like:</h2>
-                 <input type="checkbox" name="likes1" id="digits" value="Nachos"/>1. Nachos <br />
-                 <input type="checkbox" name="likes2" id="digits"value="Gummy"/>2. Gummy bears <br />
-                 <input type="checkbox" name="likes3" id="digits"value="Saturday"/>3. Saturday's with the boys <br />
+                 <input type="checkbox" name="likes1" id="digits" value="Nachos" <?php if (isset($_POST['likes1']) && $_POST['likes1'] == 'Nachos')  echo ' checked="checked"'; ?>/>1. Nachos <br />
+                 <input type="checkbox" name="likes2" id="digits"value="Gummy" <?php if (isset($_POST['likes2']) && $_POST['likes2'] == 'Gummy')  echo ' checked="checked"'; ?>/>2. Gummy bears <br />
+                 <input type="checkbox" name="likes3" id="digits"value="Saturday" <?php if (isset($_POST['likes3']) && $_POST['likes3'] == 'Saturday')  echo ' checked="checked"'; ?>/>3. Saturday's with the boys <br />
                  
                   <h3> Got any little dudes?</h3>
                   

@@ -40,7 +40,7 @@
             
             echo "<table class='table'>";
             foreach($_SESSION['cart'] as $item){
-                $itemId =$item['id'];
+                $itemId = $item['id'];
                 $itemQuant = $item['quantity'];
                 
                 echo '<tr>';

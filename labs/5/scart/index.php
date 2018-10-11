@@ -3,7 +3,7 @@
     
     session_start();
     
-     if(isset($_SESSION['cart'])){
+     if(!isset($_SESSION['cart'])){
          $_SESSION['cart'] = array();
      }
      
@@ -22,7 +22,7 @@
         $newItem['id'] = $_POST['ItemId'];
     
     
-    foreach($_SESSION['cart']as &$item){
+    foreach($_SESSION['cart'] as &$item){
         if($newItem['id'] == $item['id']){
             $item['quantity'] +=1;
             $found = true;
