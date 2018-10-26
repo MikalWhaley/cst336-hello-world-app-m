@@ -77,7 +77,7 @@ $passAmount = $_POST['passAmount'];
                 <input type="radio" name="length" id="buttons" value="6" />6 Characters
                 <input type="radio" name="length" id="buttons" value="8" />8 Characters
                 <input type="radio" name="length" id="buttons" value="10" />10 Characters
-                <br />
+               
                 <br />
                 
                 
