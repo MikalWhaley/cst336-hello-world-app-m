@@ -9,7 +9,7 @@ function getDatabaseConnection() {
     $host = "localhost";
     $username = "Mikal";
     $password = "847Themikeman"; // best practice: define this in a separte file
-    $dbname = "meme_lab"; 
+    $dbname = "db_prac"; 
     
     }else{
         $host = "us-cdbr-iron-east-01.cleardb.net";
