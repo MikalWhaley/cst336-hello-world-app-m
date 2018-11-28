@@ -1,12 +1,19 @@
 .confirmed{
     color: green;
+     text-shadow: 3px 3px 5px purple;
 }
 .error{
     color: red;
+     text-shadow: 3px 3px 5px blue;
 }
 body{
     text-align: center;
     font-family: 'Chakra Petch', sans-serif;
-    color : blue;
-    background-color: #cc0000;
+    color : black;
+    background-color: #6600cc;
+    text-shadow: 3px 3px 5px blue;
+}
+h1{
+    font-family: cursive;
+    color: #66ffcc;
 }
