@@ -1,0 +1,12 @@
+.confirmed{
+    color: green;
+}
+.error{
+    color: red;
+}
+body{
+    text-align: center;
+    font-family: 'Chakra Petch', sans-serif;
+    color : blue;
+    background-color: #cc0000;
+}

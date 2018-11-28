@@ -3,8 +3,10 @@
 <head>
 
    <title> Ajax Signup </title>
-
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  <link href="https://fonts.googleapis.com/css?family=Chakra+Petch" rel="stylesheet">
    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+   <script> var usernames   = ["Bob"]</script>
 
 </head>
 
@@ -18,11 +20,13 @@
 
 
 
-      <form method="post" name="myForm">
+      <form method="post" name="myForm" onsubmit= "return submitCheck()">
 
-        Username:   <input type="text" id="username"> <br><br>
+        Username:   <input type="text" id="username"> <span id="confirmation"></span> <br><br>
         
-        Password:   <input type="password" id="password"> <br><br>
+        Password:   <input type="password" id="password">  <span id="passConfirm"></span><br><br>
+        
+        Retype Password:   <input type="password" id="password2"> <br><br>
 
         Zip Code:     <input type="text" id="zipcode" name="zipcode"><span id="msg"></span> <br><br>
 
@@ -90,6 +94,8 @@
           <option value="default"></option>
           
         </select>
+        
+        <input type="submit" id="submit" class="submit">
 
       </form>
 
@@ -106,6 +112,11 @@ results
     $("#zipcode").change(zipcodeChange);
     
     $("#states").change(stateChange);
+    
+    $("#username").change(userNameChange);
+    
+    
+    
     
     
     function stateChange(){
@@ -195,7 +206,35 @@ results
          });
 
     }
-
+    function userNameChange(){
+      var found = false;
+      for(name in usernames){
+        if($("#username").val() == usernames[name]){
+          found = true;
+        }
+      }
+      if(found != true){
+        document.getElementById("confirmation").innerHTML = "Username Available";
+        document.getElementById("confirmation").className = "confirmed";
+      }else{
+        document.getElementById("confirmation").innerHTML = "Username Taken";
+        document.getElementById("confirmation").className = "error";
+      }
+    }
+    function submitCheck(){
+      //var match = false;
+      if($("#password").val()==$("#password2").val()){
+        //match = true;
+        document.getElementById("passConfirm").innerHTML = "Passwords Match";
+        document.getElementById("passConfirm").className = "confirmed";
+        return true;
+      }else{
+        document.getElementById("passConfirm").innerHTML = "Passwords Do Not Match!";
+        document.getElementById("passConfirm").className = "error";
+        return false;
+        //match = false;
+      }
+    }
 
 
   </script>
