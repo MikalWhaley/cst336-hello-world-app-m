@@ -37,6 +37,12 @@
  bottom: 0;
 }
 
+.edit-menu {
+ position: absolute;
+ bottom: -22px;
+}
+
+
 nav ul {
     float: right;
     text-decoration: none;
@@ -63,8 +69,4 @@ nav ul li {
 
 nav a {
     text-decoration: none; 
-}
-.edit-menu {
- position: absolute;
- bottom: -22px;
 }

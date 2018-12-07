@@ -6,8 +6,8 @@ checkLoggedIn();
 
 
 $memeID = $_GET['id'];
-deleteMemeFromDB($memeID); 
-
+deleteMemeFromDB($memeID);
 header('Location: profile.php');
+
 
 ?>

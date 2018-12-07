@@ -1,4 +1,7 @@
 <?php
+session_start(); 
+include 'functions.php';
+
 checkLoggedIn(); 
 
 if (isset($_POST['id'])) {
@@ -8,7 +11,6 @@ if (isset($_POST['id'])) {
 
 $memeID = $_GET['id'];
 $memeObj = fetchMemeFromDB($memeID); 
-
 
 function generateOptions($selectedType) {
     $memeTypes = array(
@@ -20,13 +22,14 @@ function generateOptions($selectedType) {
     foreach ($memeTypes as $memeType => $description) {
         echo "<option "; 
         
-         if ($selectedType == $memeType)
+        if ($selectedType == $memeType)
             echo "selected='selected' "; 
-
-
-        echo "<option value='$memeType'>$description</option>"; 
+            
+        echo "value='$memeType'>$description</option>"; 
+ 
     }
 }
+
 
 
 ?>
@@ -42,19 +45,19 @@ function generateOptions($selectedType) {
     <?php include 'navigation.php' ?>
     <h1>Edit Meme</h1>
     
-        <?php displayMemes(array($memeObj)); ?>
-        
-      <form method="post">
-            <input type="hidden" name="id" value=<?= $memeObj['id'] ?>>
-            Line 1: <input type="text" name="line1" value=<?= $memeObj['line1'] ?> ></input> <br/>
-            Line 2: <input type="text" name="line2" value=<?= $memeObj['line2'] ?>></input> <br/>
-            Meme Type:
-            <select name="meme-type">
-              <?php generateOptions($memeObj['meme_type']);; ?>
-            </select>
-            <br/>
-            <input type="submit"></input>
-        </form>
+    <?php displayMemes(array($memeObj)); ?>
+    
+    <form method="post">
+        <input type="hidden" name="id" value=<?= $memeObj['id'] ?>>
+        Line 1: <input type="text" name="line1" value=<?= $memeObj['line1'] ?> ></input> <br/>
+        Line 2: <input type="text" name="line2" value=<?= $memeObj['line2'] ?>></input> <br/>
+        Meme Type:
+        <select name="meme-type">
+          <?php generateOptions($memeObj['meme_type']); ?>
+        </select>
+        <br/>
+        <input type="submit"></input>
+    </form>
 
          
   </body>
