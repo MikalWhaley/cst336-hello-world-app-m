@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Dashboard</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+
+<body>
+    <!--Search bar-->
+    <div>
+
+    </div>
+
+    <!--Pages-->
+    <div id="pages">
+        <table>
+            <thead>
+                <th>Add Races</th>
+                    <button class="add action">
+                        <img src="plus.png" />
+                    </button>
+                </th>
+            </thead>
+            <tbody>
+                <!--Put all the pages data here-->
+            </tbody>
+        </table>
+
+    </div>
+
+    <!--Modal-->
+    <div id="modalBox" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+            <span class="close">&times;</span>
+
+            <div>
+                <label for="datepull">Date</label>
+                <input id="datepull" type="date" />
+            </div>
+            <div>
+                <label for="idpull">Id</label>
+                <input id="idpull" type="text" />
+            </div>
+            <div>
+                <label for="starttimepull">Start Time</label>
+               <input id="starttimepull" type="text" />
+            </div>
+            <div>
+                <label for="locationpull">Location</label>
+                  <input id="locationpull" type="text" />
+            </div>
+
+            <div>
+                <button class="save" id="saveButton">Save</button>
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="race.js"></script>
+    
+    <div>
+        <ul id="list">
+        
+        </ul>
+        <button id="button2">Get Races</button>
+    </div>
+
+</body>
+
+</html>
+<script>
+
+    
+    $("#saveButton").click(onButtonClicked);
+          
+          function onButtonClicked(){
+              
+              var jsonData ={
+             "idin": $("#idpull").val(),
+             "datein": $("#datepull").val(),
+             "starttimein": $("#starttimepull").val(),
+             "locationin": $("#locationpull").val(),
+             
+            };
+            
+            $.ajax({
+              url:"addracefunction.php",
+              type: "POST",
+              dataType: "json",
+              contentType: "application/json",
+              data: JSON.stringify(jsonData),
+              
+            })
+            .done(function(data){
+             //console.log(data);
+             console.log("Im done!");
+              window.location.replace("index.html");
+            })
+            .always(function(xhr,status){
+             
+            });
+            
+          }
+          
+          
+          $(document).ready(function() {
+            $("#list").on("click", function() {
+                $.ajax({
+                    url: "getFromDatabase.php"
+                }).done(function(data){
+                    $(this).empty().append("<li>"+ data +"</li>");
+                });
+            });
+        });
+                  
+          
+         
+</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>

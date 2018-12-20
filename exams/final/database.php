@@ -1,6 +1,6 @@
 <?php
 
-//can connect to heroku or localhost
+// connect to our mysql database server
 
 function getDatabaseConnection() {
     
@@ -9,7 +9,7 @@ function getDatabaseConnection() {
     $host = "localhost";
     $username = "Mikal";
     $password = "847Themikeman"; // best practice: define this in a separte file
-    $dbname = "memes_v2"; 
+    $dbname = "final"; 
     
    }else{
        $host = "us-cdbr-iron-east-01.cleardb.net";
